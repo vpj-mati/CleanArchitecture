@@ -9,14 +9,11 @@ namespace CleanArchitecture.Application.Common.Behaviours;
 public class AuthorizationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : notnull
 {
     private readonly ICurrentUserService _currentUserService;
-    private readonly IIdentityService _identityService;
 
     public AuthorizationBehaviour(
-        ICurrentUserService currentUserService,
-        IIdentityService identityService)
+        ICurrentUserService currentUserService)
     {
         _currentUserService = currentUserService;
-        _identityService = identityService;
     }
 
     public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
@@ -42,7 +39,7 @@ public class AuthorizationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRe
                 {
                     foreach (var role in roles)
                     {
-                        var isInRole = await _identityService.IsInRoleAsync(_currentUserService.UserId, role.Trim());
+                        var isInRole = true; //Incorporar el comportamiento de los roles en esta seccion
                         if (isInRole)
                         {
                             authorized = true;
@@ -64,7 +61,7 @@ public class AuthorizationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRe
             {
                 foreach (var policy in authorizeAttributesWithPolicies.Select(a => a.Policy))
                 {
-                    var authorized = await _identityService.AuthorizeAsync(_currentUserService.UserId, policy);
+                    var authorized = true; //Agrear el comportamiento de autorización aquí;
 
                     if (!authorized)
                     {

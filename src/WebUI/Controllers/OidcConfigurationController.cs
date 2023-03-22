@@ -6,14 +6,10 @@ namespace CleanArchitecture.WebUI.Controllers;
 [ApiExplorerSettings(IgnoreApi = true)]
 public class OidcConfigurationController : Controller
 {
-    private readonly ILogger<OidcConfigurationController> _logger;
-
     public OidcConfigurationController(
-        IClientRequestParametersProvider clientRequestParametersProvider,
-        ILogger<OidcConfigurationController> logger)
+        IClientRequestParametersProvider clientRequestParametersProvider)
     {
         ClientRequestParametersProvider = clientRequestParametersProvider;
-        _logger = logger;
     }
 
     public IClientRequestParametersProvider ClientRequestParametersProvider { get; }

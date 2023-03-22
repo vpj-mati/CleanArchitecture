@@ -95,7 +95,7 @@ public partial class Testing
             return _currentUserId;
         }
 
-        var errors = string.Join(Environment.NewLine, result.ToApplicationResult().Errors);
+        var errors = string.Join(Environment.NewLine, result.Errors);
 
         throw new Exception($"Unable to create {userName}.{Environment.NewLine}{errors}");
     }
