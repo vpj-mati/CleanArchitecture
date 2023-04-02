@@ -144,7 +144,7 @@
       "enumNameGeneratorType": null,
       "serviceHost": null,
       "serviceSchemes": null,
-      "output": "../Clients/NSwagClients.g.cs",
+      "output": "../HttpClients/NSwagClients.g.cs",
       "newLineBehavior": "Auto"
     }
   }

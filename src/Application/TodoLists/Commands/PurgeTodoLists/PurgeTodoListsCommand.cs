@@ -1,5 +1,4 @@
 ﻿using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
-using ProcesoAutonomo.ServiceA.Application.Common.Security;
 using MediatR;
 
 namespace ProcesoAutonomo.ServiceA.Application.TodoLists.Commands.PurgeTodoLists;

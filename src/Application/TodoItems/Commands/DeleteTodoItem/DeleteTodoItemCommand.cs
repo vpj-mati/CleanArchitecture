@@ -21,11 +21,11 @@ public class DeleteTodoItemCommandHandler : IRequestHandler<DeleteTodoItemComman
     {
         var entity = await _context.TodoItems
             .FindAsync(new object[] { request.Id }, cancellationToken) ?? throw new NotFoundException(nameof(TodoItem), request.Id);
+        
         _context.TodoItems.Remove(entity);
 
         entity.AddDomainEvent(new TodoItemDeletedEvent(entity));
 
         await _context.SaveChangesAsync(cancellationToken);
     }
-
 }
