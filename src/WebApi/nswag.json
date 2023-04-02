@@ -107,7 +107,7 @@
       "wrapResponseMethods": [],
       "generateResponseClasses": true,
       "responseClass": "SwaggerResponse",
-      "namespace": "ProcesoAutonomo.ServiceA.NSwagClients",
+      "namespace": "ProcesoAutonomo.ServiceA.HttpClients.NSwagClients",
       "requiredPropertiesMustBeDefined": true,
       "dateType": "System.DateTimeOffset",
       "jsonConverters": null,
