@@ -1,8 +1,8 @@
-﻿using WebUI.Filters;
+﻿using ProcesoAutonomo.ServiceA.WebApi.Filters;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebUI.Controllers;
+namespace ProcesoAutonomo.ServiceA.WebApi.Controllers;
 
 [ApiController]
 [ApiExceptionFilter]

@@ -21,9 +21,9 @@ public static class ConfigurationHelper
         if (_baseUrl == null)
         {
             _baseUrl = _configuration["BaseUrl"];
-            _baseUrl = _baseUrl.TrimEnd('/');
+            _baseUrl = _baseUrl?.TrimEnd('/');
         }
 
-        return _baseUrl;
+        return _baseUrl??"";
     }
 }

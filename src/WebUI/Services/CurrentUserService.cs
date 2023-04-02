@@ -2,7 +2,7 @@
 
 using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
 
-namespace WebUI.Services;
+namespace ProcesoAutonomo.ServiceA.WebApi.Services;
 
 public class CurrentUserService : ICurrentUserService
 {

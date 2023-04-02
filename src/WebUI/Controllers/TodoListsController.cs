@@ -3,10 +3,9 @@ using ProcesoAutonomo.ServiceA.Application.TodoLists.Commands.DeleteTodoList;
 using ProcesoAutonomo.ServiceA.Application.TodoLists.Commands.UpdateTodoList;
 using ProcesoAutonomo.ServiceA.Application.TodoLists.Queries.ExportTodos;
 using ProcesoAutonomo.ServiceA.Application.TodoLists.Queries.GetTodos;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebUI.Controllers;
+namespace ProcesoAutonomo.ServiceA.WebApi.Controllers;
 
 public class TodoListsController : ApiControllerBase
 {

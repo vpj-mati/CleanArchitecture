@@ -1,7 +1,7 @@
 ﻿using ProcesoAutonomo.ServiceA.Application.WeatherForecasts.Queries.GetWeatherForecasts;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebUI.Controllers;
+namespace ProcesoAutonomo.ServiceA.WebApi.Controllers;
 
 public class WeatherForecastController : ApiControllerBase
 {

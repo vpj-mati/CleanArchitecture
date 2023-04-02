@@ -4,10 +4,9 @@ using ProcesoAutonomo.ServiceA.Application.TodoItems.Commands.DeleteTodoItem;
 using ProcesoAutonomo.ServiceA.Application.TodoItems.Commands.UpdateTodoItem;
 using ProcesoAutonomo.ServiceA.Application.TodoItems.Commands.UpdateTodoItemDetail;
 using ProcesoAutonomo.ServiceA.Application.TodoItems.Queries.GetTodoItemsWithPagination;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebUI.Controllers;
+namespace ProcesoAutonomo.ServiceA.WebApi.Controllers;
 
 public class TodoItemsController : ApiControllerBase
 {
