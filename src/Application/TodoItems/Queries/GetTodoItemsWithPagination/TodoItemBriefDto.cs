@@ -1,7 +1,7 @@
-﻿using Application.Common.Mappings;
-using Domain.Entities;
+﻿using ProcesoAutonomo.ServiceA.Application.Common.Mappings;
+using ProcesoAutonomo.ServiceA.Domain.Entities;
 
-namespace Application.TodoItems.Queries.GetTodoItemsWithPagination;
+namespace ProcesoAutonomo.ServiceA.Application.TodoItems.Queries.GetTodoItemsWithPagination;
 
 public class TodoItemBriefDto : IMapFrom<TodoItem>
 {

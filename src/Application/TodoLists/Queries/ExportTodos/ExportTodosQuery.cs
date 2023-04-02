@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using Application.Common.Interfaces;
+using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace Application.TodoLists.Queries.ExportTodos;
+namespace ProcesoAutonomo.ServiceA.Application.TodoLists.Queries.ExportTodos;
 
 public record ExportTodosQuery : IRequest<ExportTodosVm>
 {

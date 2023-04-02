@@ -2,8 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
-        <RootNamespace>Domain</RootNamespace>
-        <AssemblyName>Domain</AssemblyName>
+        <RootNamespace>ProcesoAutonomo.ServiceA.Domain</RootNamespace>
+        <AssemblyName>ProcesoAutonomo.ServiceA.Domain</AssemblyName>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>

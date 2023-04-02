@@ -1,10 +1,10 @@
 ﻿using System.Globalization;
-using Application.Common.Interfaces;
-using Application.TodoLists.Queries.ExportTodos;
-using Infrastructure.Files.Maps;
+using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
+using ProcesoAutonomo.ServiceA.Application.TodoLists.Queries.ExportTodos;
+using ProcesoAutonomo.ServiceA.Infrastructure.Files.Maps;
 using CsvHelper;
 
-namespace Infrastructure.Files;
+namespace ProcesoAutonomo.ServiceA.Infrastructure.Files;
 
 public class CsvFileBuilder : ICsvFileBuilder
 {

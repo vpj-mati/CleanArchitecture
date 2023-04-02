@@ -1,8 +1,8 @@
 ﻿using FluentValidation;
 using MediatR;
-using ValidationException = Application.Common.Exceptions.ValidationException;
+using ValidationException = ProcesoAutonomo.ServiceA.Application.Common.Exceptions.ValidationException;
 
-namespace Application.Common.Behaviours;
+namespace ProcesoAutonomo.ServiceA.Application.Common.Behaviours;
 
 public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
      where TRequest : notnull

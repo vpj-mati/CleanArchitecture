@@ -2,8 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
-        <RootNamespace>Infrastructure</RootNamespace>
-        <AssemblyName>Infrastructure</AssemblyName>
+        <RootNamespace>ProcesoAutonomo.ServiceA.Infrastructure</RootNamespace>
+        <AssemblyName>ProcesoAutonomo.ServiceA.Infrastructure</AssemblyName>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>

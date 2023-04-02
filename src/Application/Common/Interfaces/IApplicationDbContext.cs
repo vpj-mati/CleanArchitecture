@@ -1,7 +1,7 @@
-﻿using Domain.Entities;
+﻿using ProcesoAutonomo.ServiceA.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Application.Common.Interfaces;
+namespace ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
 
 public interface IApplicationDbContext
 {

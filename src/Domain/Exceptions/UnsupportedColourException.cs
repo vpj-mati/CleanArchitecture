@@ -1,4 +1,4 @@
-﻿namespace Domain.Exceptions;
+﻿namespace ProcesoAutonomo.ServiceA.Domain.Exceptions;
 
 public class UnsupportedColourException : Exception
 {

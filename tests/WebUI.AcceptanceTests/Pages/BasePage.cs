@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.WebUI.AcceptanceTests.Pages;
+﻿namespace ProcesoAutonomo.ServiceA.WebApi.AcceptanceTests.Pages;
 
 public abstract class BasePage
 {

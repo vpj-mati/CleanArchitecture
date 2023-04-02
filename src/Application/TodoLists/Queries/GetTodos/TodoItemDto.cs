@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Application.Common.Mappings;
-using Domain.Entities;
+using ProcesoAutonomo.ServiceA.Application.Common.Mappings;
+using ProcesoAutonomo.ServiceA.Domain.Entities;
 
-namespace Application.TodoLists.Queries.GetTodos;
+namespace ProcesoAutonomo.ServiceA.Application.TodoLists.Queries.GetTodos;
 
 public class TodoItemDto : IMapFrom<TodoItem>
 {

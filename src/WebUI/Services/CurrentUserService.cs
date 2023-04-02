@@ -1,6 +1,6 @@
 ﻿using System.Security.Claims;
 
-using Application.Common.Interfaces;
+using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
 
 namespace WebUI.Services;
 

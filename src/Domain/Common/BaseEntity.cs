@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Domain.Common;
+namespace ProcesoAutonomo.ServiceA.Domain.Common;
 
 public abstract class BaseEntity
 {

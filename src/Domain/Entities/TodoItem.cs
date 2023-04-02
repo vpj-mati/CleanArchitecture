@@ -1,4 +1,4 @@
-﻿namespace Domain.Entities;
+﻿namespace ProcesoAutonomo.ServiceA.Domain.Entities;
 
 public class TodoItem : BaseAuditableEntity
 {

@@ -1,5 +1,5 @@
-﻿using Infrastructure.Identity;
-using Infrastructure.Persistence;
+﻿using ProcesoAutonomo.ServiceA.Infrastructure.Identity;
+using ProcesoAutonomo.ServiceA.Infrastructure.Persistence;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Testing;
@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using NUnit.Framework;
 using Respawn;
 
-namespace Application.IntegrationTests;
+namespace ProcesoAutonomo.ServiceA.Application.IntegrationTests;
 
 [SetUpFixture]
 public partial class Testing

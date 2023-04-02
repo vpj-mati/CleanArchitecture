@@ -1,6 +1,6 @@
-﻿using Application.Common.Interfaces;
+﻿using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
 
-namespace Infrastructure.Services;
+namespace ProcesoAutonomo.ServiceA.Infrastructure.Services;
 
 public class DateTimeService : IDateTime
 {

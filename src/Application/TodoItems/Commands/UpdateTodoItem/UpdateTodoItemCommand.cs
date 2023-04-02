@@ -1,9 +1,9 @@
-﻿using Application.Common.Exceptions;
-using Application.Common.Interfaces;
-using Domain.Entities;
+﻿using ProcesoAutonomo.ServiceA.Application.Common.Exceptions;
+using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
+using ProcesoAutonomo.ServiceA.Domain.Entities;
 using MediatR;
 
-namespace Application.TodoItems.Commands.UpdateTodoItem;
+namespace ProcesoAutonomo.ServiceA.Application.TodoItems.Commands.UpdateTodoItem;
 
 public record UpdateTodoItemCommand : IRequest
 {

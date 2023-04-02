@@ -1,8 +1,8 @@
-﻿using Application.Common.Interfaces;
+﻿using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 
-namespace Application.TodoLists.Commands.UpdateTodoList;
+namespace ProcesoAutonomo.ServiceA.Application.TodoLists.Commands.UpdateTodoList;
 
 public class UpdateTodoListCommandValidator : AbstractValidator<UpdateTodoListCommand>
 {

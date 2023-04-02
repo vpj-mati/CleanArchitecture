@@ -1,7 +1,7 @@
-﻿using Application.Common.Mappings;
-using Domain.Entities;
+﻿using ProcesoAutonomo.ServiceA.Application.Common.Mappings;
+using ProcesoAutonomo.ServiceA.Domain.Entities;
 
-namespace Application.Common.Models;
+namespace ProcesoAutonomo.ServiceA.Application.Common.Models;
 
 // Note: This is currently just used to demonstrate applying multiple IMapFrom attributes.
 public class LookupDto : IMapFrom<TodoList>, IMapFrom<TodoItem>

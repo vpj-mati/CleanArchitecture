@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using Application.Common.Models;
+using ProcesoAutonomo.ServiceA.Application.Common.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Application.Common.Mappings;
+namespace ProcesoAutonomo.ServiceA.Application.Common.Mappings;
 
 public static class MappingExtensions
 {

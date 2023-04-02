@@ -1,8 +1,8 @@
-﻿using Application.TodoLists.Commands.CreateTodoList;
-using Application.TodoLists.Commands.DeleteTodoList;
-using Application.TodoLists.Commands.UpdateTodoList;
-using Application.TodoLists.Queries.ExportTodos;
-using Application.TodoLists.Queries.GetTodos;
+﻿using ProcesoAutonomo.ServiceA.Application.TodoLists.Commands.CreateTodoList;
+using ProcesoAutonomo.ServiceA.Application.TodoLists.Commands.DeleteTodoList;
+using ProcesoAutonomo.ServiceA.Application.TodoLists.Commands.UpdateTodoList;
+using ProcesoAutonomo.ServiceA.Application.TodoLists.Queries.ExportTodos;
+using ProcesoAutonomo.ServiceA.Application.TodoLists.Queries.GetTodos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 

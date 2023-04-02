@@ -1,8 +1,8 @@
-﻿using Domain.Events;
+﻿using ProcesoAutonomo.ServiceA.Domain.Events;
 using MediatR;
 using Microsoft.Extensions.Logging;
 
-namespace Application.TodoItems.EventHandlers;
+namespace ProcesoAutonomo.ServiceA.Application.TodoItems.EventHandlers;
 
 public class TodoItemCreatedEventHandler : INotificationHandler<TodoItemCreatedEvent>
 {
@@ -15,7 +15,7 @@ public class TodoItemCreatedEventHandler : INotificationHandler<TodoItemCreatedE
 
     public Task Handle(TodoItemCreatedEvent notification, CancellationToken cancellationToken)
     {
-        _logger.LogInformation("CleanArchitecture Domain Event: {DomainEvent}", notification.GetType().Name);
+        _logger.LogInformation("CleanArchitecture ProcesoAutonomo.ServiceA.Domain Event: {DomainEvent}", notification.GetType().Name);
 
         return Task.CompletedTask;
     }

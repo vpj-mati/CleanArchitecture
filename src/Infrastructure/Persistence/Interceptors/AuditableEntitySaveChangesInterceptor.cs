@@ -1,10 +1,10 @@
-﻿using Application.Common.Interfaces;
-using Domain.Common;
+﻿using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
+using ProcesoAutonomo.ServiceA.Domain.Common;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 
-namespace Infrastructure.Persistence.Interceptors;
+namespace ProcesoAutonomo.ServiceA.Infrastructure.Persistence.Interceptors;
 
 public class AuditableEntitySaveChangesInterceptor : SaveChangesInterceptor
 {

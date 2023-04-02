@@ -1,7 +1,7 @@
-﻿using Application.Common.Mappings;
-using Domain.Entities;
+﻿using ProcesoAutonomo.ServiceA.Application.Common.Mappings;
+using ProcesoAutonomo.ServiceA.Domain.Entities;
 
-namespace Application.TodoLists.Queries.ExportTodos;
+namespace ProcesoAutonomo.ServiceA.Application.TodoLists.Queries.ExportTodos;
 
 public class TodoItemRecord : IMapFrom<TodoItem>
 {

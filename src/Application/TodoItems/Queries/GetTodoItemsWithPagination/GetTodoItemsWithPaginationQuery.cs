@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using Application.Common.Interfaces;
-using Application.Common.Mappings;
-using Application.Common.Models;
+using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
+using ProcesoAutonomo.ServiceA.Application.Common.Mappings;
+using ProcesoAutonomo.ServiceA.Application.Common.Models;
 using MediatR;
 
-namespace Application.TodoItems.Queries.GetTodoItemsWithPagination;
+namespace ProcesoAutonomo.ServiceA.Application.TodoItems.Queries.GetTodoItemsWithPagination;
 
 public record GetTodoItemsWithPaginationQuery : IRequest<PaginatedList<TodoItemBriefDto>>
 {

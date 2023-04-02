@@ -1,4 +1,4 @@
-﻿namespace Domain.Events;
+﻿namespace ProcesoAutonomo.ServiceA.Domain.Events;
 
 public class TodoItemCompletedEvent : BaseEvent
 {

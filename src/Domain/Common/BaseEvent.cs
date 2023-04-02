@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Domain.Common;
+namespace ProcesoAutonomo.ServiceA.Domain.Common;
 
 public abstract class BaseEvent : INotification
 {

@@ -1,4 +1,4 @@
-﻿using Application.WeatherForecasts.Queries.GetWeatherForecasts;
+﻿using ProcesoAutonomo.ServiceA.Application.WeatherForecasts.Queries.GetWeatherForecasts;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebUI.Controllers;

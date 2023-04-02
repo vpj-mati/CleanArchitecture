@@ -1,8 +1,8 @@
-﻿using Application.Common.Interfaces;
-using Application.Common.Security;
+﻿using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
+using ProcesoAutonomo.ServiceA.Application.Common.Security;
 using MediatR;
 
-namespace Application.TodoLists.Commands.PurgeTodoLists;
+namespace ProcesoAutonomo.ServiceA.Application.TodoLists.Commands.PurgeTodoLists;
 
 public record PurgeTodoListsCommand : IRequest;
 

@@ -1,4 +1,4 @@
-﻿namespace Domain.Enums;
+﻿namespace ProcesoAutonomo.ServiceA.Domain.Enums;
 
 public enum PriorityLevel
 {

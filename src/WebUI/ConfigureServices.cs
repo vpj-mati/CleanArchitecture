@@ -1,5 +1,5 @@
-﻿using Application.Common.Interfaces;
-using Infrastructure.Persistence;
+﻿using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
+using ProcesoAutonomo.ServiceA.Infrastructure.Persistence;
 using WebUI.Services;
 using Microsoft.AspNetCore.Mvc;
 using NSwag;

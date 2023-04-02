@@ -1,4 +1,4 @@
-﻿namespace Domain.ValueObjects;
+﻿namespace ProcesoAutonomo.ServiceA.Domain.ValueObjects;
 
 public class Colour : ValueObject
 {

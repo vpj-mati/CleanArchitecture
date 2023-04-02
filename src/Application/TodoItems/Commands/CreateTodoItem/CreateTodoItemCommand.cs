@@ -1,9 +1,9 @@
-﻿using Application.Common.Interfaces;
-using Domain.Entities;
-using Domain.Events;
+﻿using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
+using ProcesoAutonomo.ServiceA.Domain.Entities;
+using ProcesoAutonomo.ServiceA.Domain.Events;
 using MediatR;
 
-namespace Application.TodoItems.Commands.CreateTodoItem;
+namespace ProcesoAutonomo.ServiceA.Application.TodoItems.Commands.CreateTodoItem;
 
 public record CreateTodoItemCommand : IRequest<int>
 {

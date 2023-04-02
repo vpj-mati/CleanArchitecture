@@ -1,11 +1,11 @@
 ﻿using System.Reflection;
-using Application.Common.Interfaces;
-using Domain.Entities;
-using Infrastructure.Persistence.Interceptors;
+using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
+using ProcesoAutonomo.ServiceA.Domain.Entities;
+using ProcesoAutonomo.ServiceA.Infrastructure.Persistence.Interceptors;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace Infrastructure.Persistence;
+namespace ProcesoAutonomo.ServiceA.Infrastructure.Persistence;
 
 public class ApplicationDbContext : DbContext, IApplicationDbContext
 {

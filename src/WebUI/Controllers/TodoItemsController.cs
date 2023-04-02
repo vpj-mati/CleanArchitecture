@@ -1,9 +1,9 @@
-﻿using Application.Common.Models;
-using Application.TodoItems.Commands.CreateTodoItem;
-using Application.TodoItems.Commands.DeleteTodoItem;
-using Application.TodoItems.Commands.UpdateTodoItem;
-using Application.TodoItems.Commands.UpdateTodoItemDetail;
-using Application.TodoItems.Queries.GetTodoItemsWithPagination;
+﻿using ProcesoAutonomo.ServiceA.Application.Common.Models;
+using ProcesoAutonomo.ServiceA.Application.TodoItems.Commands.CreateTodoItem;
+using ProcesoAutonomo.ServiceA.Application.TodoItems.Commands.DeleteTodoItem;
+using ProcesoAutonomo.ServiceA.Application.TodoItems.Commands.UpdateTodoItem;
+using ProcesoAutonomo.ServiceA.Application.TodoItems.Commands.UpdateTodoItemDetail;
+using ProcesoAutonomo.ServiceA.Application.TodoItems.Queries.GetTodoItemsWithPagination;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 

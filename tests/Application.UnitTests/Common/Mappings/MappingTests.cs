@@ -1,12 +1,12 @@
 ﻿using System.Runtime.Serialization;
 using AutoMapper;
-using Application.Common.Mappings;
-using Application.Common.Models;
-using Application.TodoLists.Queries.GetTodos;
-using Domain.Entities;
+using ProcesoAutonomo.ServiceA.Application.Common.Mappings;
+using ProcesoAutonomo.ServiceA.Application.Common.Models;
+using ProcesoAutonomo.ServiceA.Application.TodoLists.Queries.GetTodos;
+using ProcesoAutonomo.ServiceA.Domain.Entities;
 using NUnit.Framework;
 
-namespace Application.UnitTests.Common.Mappings;
+namespace ProcesoAutonomo.ServiceA.Application.UnitTests.Common.Mappings;
 
 public class MappingTests
 {

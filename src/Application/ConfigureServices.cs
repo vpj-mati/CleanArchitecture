@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
-using Application.Common.Behaviours;
+using ProcesoAutonomo.ServiceA.Application.Common.Behaviours;
 using FluentValidation;
 using MediatR;
 

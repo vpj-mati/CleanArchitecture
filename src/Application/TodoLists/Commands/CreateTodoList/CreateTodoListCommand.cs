@@ -1,8 +1,8 @@
-﻿using Application.Common.Interfaces;
-using Domain.Entities;
+﻿using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
+using ProcesoAutonomo.ServiceA.Domain.Entities;
 using MediatR;
 
-namespace Application.TodoLists.Commands.CreateTodoList;
+namespace ProcesoAutonomo.ServiceA.Application.TodoLists.Commands.CreateTodoList;
 
 public record CreateTodoListCommand : IRequest<int>
 {

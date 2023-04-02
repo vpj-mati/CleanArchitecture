@@ -1,4 +1,4 @@
-﻿using Domain.Common;
+﻿using ProcesoAutonomo.ServiceA.Domain.Common;
 using Microsoft.EntityFrameworkCore;
 
 namespace MediatR;

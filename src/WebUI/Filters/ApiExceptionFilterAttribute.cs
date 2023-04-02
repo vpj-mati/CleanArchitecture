@@ -1,4 +1,4 @@
-﻿using Application.Common.Exceptions;
+﻿using ProcesoAutonomo.ServiceA.Application.Common.Exceptions;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;

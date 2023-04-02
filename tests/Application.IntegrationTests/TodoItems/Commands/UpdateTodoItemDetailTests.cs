@@ -1,14 +1,14 @@
-﻿using Application.Common.Exceptions;
-using Application.TodoItems.Commands.CreateTodoItem;
-using Application.TodoItems.Commands.UpdateTodoItem;
-using Application.TodoItems.Commands.UpdateTodoItemDetail;
-using Application.TodoLists.Commands.CreateTodoList;
-using Domain.Entities;
-using Domain.Enums;
+﻿using ProcesoAutonomo.ServiceA.Application.Common.Exceptions;
+using ProcesoAutonomo.ServiceA.Application.TodoItems.Commands.CreateTodoItem;
+using ProcesoAutonomo.ServiceA.Application.TodoItems.Commands.UpdateTodoItem;
+using ProcesoAutonomo.ServiceA.Application.TodoItems.Commands.UpdateTodoItemDetail;
+using ProcesoAutonomo.ServiceA.Application.TodoLists.Commands.CreateTodoList;
+using ProcesoAutonomo.ServiceA.Domain.Entities;
+using ProcesoAutonomo.ServiceA.Domain.Enums;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace Application.IntegrationTests.TodoItems.Commands;
+namespace ProcesoAutonomo.ServiceA.Application.IntegrationTests.TodoItems.Commands;
 
 using static Testing;
 

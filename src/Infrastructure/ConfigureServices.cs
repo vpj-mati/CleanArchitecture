@@ -1,8 +1,8 @@
-﻿using Application.Common.Interfaces;
-using Infrastructure.Files;
-using Infrastructure.Persistence;
-using Infrastructure.Persistence.Interceptors;
-using Infrastructure.Services;
+﻿using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
+using ProcesoAutonomo.ServiceA.Infrastructure.Files;
+using ProcesoAutonomo.ServiceA.Infrastructure.Persistence;
+using ProcesoAutonomo.ServiceA.Infrastructure.Persistence.Interceptors;
+using ProcesoAutonomo.ServiceA.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 

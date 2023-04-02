@@ -1,9 +1,9 @@
-﻿using Domain.Exceptions;
-using Domain.ValueObjects;
+﻿using ProcesoAutonomo.ServiceA.Domain.Exceptions;
+using ProcesoAutonomo.ServiceA.Domain.ValueObjects;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace Domain.UnitTests.ValueObjects;
+namespace ProcesoAutonomo.ServiceA.Domain.UnitTests.ValueObjects;
 
 public class ColourTests
 {

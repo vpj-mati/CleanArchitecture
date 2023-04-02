@@ -1,4 +1,4 @@
-using Infrastructure.Persistence;
+using ProcesoAutonomo.ServiceA.Infrastructure.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -49,3 +49,5 @@ app.MapRazorPages();
 app.MapFallbackToFile("index.html");
 
 app.Run();
+
+public partial class Program { }

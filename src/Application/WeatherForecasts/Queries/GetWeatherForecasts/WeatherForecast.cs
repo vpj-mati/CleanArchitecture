@@ -1,4 +1,4 @@
-﻿namespace Application.WeatherForecasts.Queries.GetWeatherForecasts;
+﻿namespace ProcesoAutonomo.ServiceA.Application.WeatherForecasts.Queries.GetWeatherForecasts;
 
 public class WeatherForecast
 {

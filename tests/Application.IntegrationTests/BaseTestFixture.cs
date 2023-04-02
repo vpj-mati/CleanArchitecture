@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace Application.IntegrationTests;
+namespace ProcesoAutonomo.ServiceA.Application.IntegrationTests;
 
 using static Testing;
 

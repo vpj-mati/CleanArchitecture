@@ -1,8 +1,8 @@
 ﻿using System.Globalization;
-using Application.TodoLists.Queries.ExportTodos;
+using ProcesoAutonomo.ServiceA.Application.TodoLists.Queries.ExportTodos;
 using CsvHelper.Configuration;
 
-namespace Infrastructure.Files.Maps;
+namespace ProcesoAutonomo.ServiceA.Infrastructure.Files.Maps;
 
 public class TodoItemRecordMap : ClassMap<TodoItemRecord>
 {

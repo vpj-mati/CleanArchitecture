@@ -1,10 +1,10 @@
-﻿using Domain.Entities;
-using Infrastructure.Identity;
+﻿using ProcesoAutonomo.ServiceA.Domain.Entities;
+using ProcesoAutonomo.ServiceA.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace Infrastructure.Persistence;
+namespace ProcesoAutonomo.ServiceA.Infrastructure.Persistence;
 
 public class ApplicationDbContextInitialiser
 {

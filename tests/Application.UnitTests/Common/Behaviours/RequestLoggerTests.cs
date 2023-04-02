@@ -1,11 +1,11 @@
-﻿using Application.Common.Behaviours;
-using Application.Common.Interfaces;
-using Application.TodoItems.Commands.CreateTodoItem;
+﻿using ProcesoAutonomo.ServiceA.Application.Common.Behaviours;
+using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
+using ProcesoAutonomo.ServiceA.Application.TodoItems.Commands.CreateTodoItem;
 using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
 
-namespace Application.UnitTests.Common.Behaviours;
+namespace ProcesoAutonomo.ServiceA.Application.UnitTests.Common.Behaviours;
 
 public class RequestLoggerTests
 {

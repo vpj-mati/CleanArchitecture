@@ -1,6 +1,6 @@
-﻿using Application.TodoLists.Queries.ExportTodos;
+﻿using ProcesoAutonomo.ServiceA.Application.TodoLists.Queries.ExportTodos;
 
-namespace Application.Common.Interfaces;
+namespace ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
 
 public interface ICsvFileBuilder
 {

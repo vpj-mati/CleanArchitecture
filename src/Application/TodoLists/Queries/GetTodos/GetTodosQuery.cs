@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using Application.Common.Interfaces;
-using Application.Common.Security;
-using Domain.Enums;
+using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
+using ProcesoAutonomo.ServiceA.Application.Common.Security;
+using ProcesoAutonomo.ServiceA.Domain.Enums;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace Application.TodoLists.Queries.GetTodos;
+namespace ProcesoAutonomo.ServiceA.Application.TodoLists.Queries.GetTodos;
 
 public record GetTodosQuery : IRequest<TodosVm>;
 

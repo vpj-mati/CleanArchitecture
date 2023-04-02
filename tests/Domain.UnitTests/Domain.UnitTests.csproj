@@ -2,8 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
-        <RootNamespace>Domain.UnitTests</RootNamespace>
-        <AssemblyName>Domain.UnitTests</AssemblyName>
+        <RootNamespace>ProcesoAutonomo.ServiceA.Domain.UnitTests</RootNamespace>
+        <AssemblyName>ProcesoAutonomo.ServiceA.Domain.UnitTests</AssemblyName>
 
         <IsPackable>false</IsPackable>
         <ImplicitUsings>enable</ImplicitUsings>

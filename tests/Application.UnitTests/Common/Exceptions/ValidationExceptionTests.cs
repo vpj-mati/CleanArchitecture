@@ -1,9 +1,9 @@
-﻿using Application.Common.Exceptions;
+﻿using ProcesoAutonomo.ServiceA.Application.Common.Exceptions;
 using FluentAssertions;
 using FluentValidation.Results;
 using NUnit.Framework;
 
-namespace Application.UnitTests.Common.Exceptions;
+namespace ProcesoAutonomo.ServiceA.Application.UnitTests.Common.Exceptions;
 
 public class ValidationExceptionTests
 {

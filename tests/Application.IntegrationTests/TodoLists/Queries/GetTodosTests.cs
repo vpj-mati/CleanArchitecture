@@ -1,10 +1,10 @@
-﻿using Application.TodoLists.Queries.GetTodos;
-using Domain.Entities;
-using Domain.ValueObjects;
+﻿using ProcesoAutonomo.ServiceA.Application.TodoLists.Queries.GetTodos;
+using ProcesoAutonomo.ServiceA.Domain.Entities;
+using ProcesoAutonomo.ServiceA.Domain.ValueObjects;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace Application.IntegrationTests.TodoLists.Queries;
+namespace ProcesoAutonomo.ServiceA.Application.IntegrationTests.TodoLists.Queries;
 
 using static Testing;
 

@@ -2,8 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
-        <RootNamespace>Application.IntegrationTests</RootNamespace>
-        <AssemblyName>Application.IntegrationTests</AssemblyName>
+        <RootNamespace>ProcesoAutonomo.ServiceA.Application.IntegrationTests</RootNamespace>
+        <AssemblyName>ProcesoAutonomo.ServiceA.Application.IntegrationTests</AssemblyName>
 
         <IsPackable>false</IsPackable>
         <ImplicitUsings>enable</ImplicitUsings>
@@ -34,7 +34,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\src\WebUI\WebUI.csproj" />
+        <ProjectReference Include="..\..\src\WebUI\WebApi.csproj" />
     </ItemGroup>
 
 </Project>
