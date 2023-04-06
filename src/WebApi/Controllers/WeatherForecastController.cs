@@ -1,5 +1,6 @@
 ﻿using ProcesoAutonomo.ServiceA.Application.WeatherForecasts.Queries.GetWeatherForecasts;
 using Microsoft.AspNetCore.Mvc;
+using ProcesoAutonomo.ServiceA.Application.Objects.WeatherForecasts.Queries.GetWeatherForecasts;
 
 namespace ProcesoAutonomo.ServiceA.WebApi.Controllers;
 

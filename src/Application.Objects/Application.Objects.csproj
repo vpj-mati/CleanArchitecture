@@ -2,21 +2,13 @@
 
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
+        <RootNamespace>ProcesoAutonomo.ServiceA.Application.Objects</RootNamespace>
+        <AssemblyName>ProcesoAutonomo.ServiceA.Application.Objects</AssemblyName>
         <ImplicitUsings>enable</ImplicitUsings>
-        <RootNamespace>ProcesoAutonomo.ServiceA.HttpClients</RootNamespace>
-        <AssemblyName>ProcesoAutonomo.ServiceA.HttpClients</AssemblyName>
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageOutputPath>..\..\results\packages</PackageOutputPath>
         <PackageVersion>0.0.6</PackageVersion>
     </PropertyGroup>
-
-    <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\Application.Objects\Application.Objects.csproj" />
-    </ItemGroup>
 
 </Project>

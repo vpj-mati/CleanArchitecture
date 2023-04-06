@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using ProcesoAutonomo.ServiceA.Application.Objects.WeatherForecasts.Queries.GetWeatherForecasts;
 
 namespace ProcesoAutonomo.ServiceA.Application.WeatherForecasts.Queries.GetWeatherForecasts;
 
@@ -15,7 +16,7 @@ public class GetWeatherForecastsQueryHandler : IRequestHandler<GetWeatherForecas
     {
         var rng = new Random();
 
-        return await Task.FromResult(Enumerable.Range(1, 5000).Select(index => new WeatherForecast
+        return await Task.FromResult(Enumerable.Range(1, 50).Select(index => new WeatherForecast
         {
             Date = DateTime.Now.AddDays(index),
             TemperatureC = rng.Next(-20, 55),

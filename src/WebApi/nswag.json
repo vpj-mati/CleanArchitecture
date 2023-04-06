@@ -94,7 +94,10 @@
       "queryNullValue": "",
       "className": "{controller}Client",
       "operationGenerationMode": "MultipleClientsFromOperationId",
-      "additionalNamespaceUsages": [],
+      "additionalNamespaceUsages": [
+        "ProcesoAutonomo.ServiceA.Application.Objects.WeatherForecasts.Queries.GetWeatherForecasts",
+        "ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Queries.GetTodos"
+      ],
       "additionalContractNamespaceUsages": [],
       "generateOptionalParameters": false,
       "generateJsonMethods": false,
@@ -135,7 +138,7 @@
       "inlineNamedDictionaries": false,
       "inlineNamedTuples": true,
       "inlineNamedAny": false,
-      "generateDtoTypes": true,
+      "generateDtoTypes": false,
       "generateOptionalPropertiesAsNullable": false,
       "generateNullableReferenceTypes": false,
       "templateDirectory": null,

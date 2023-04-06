@@ -1,6 +1,4 @@
 ﻿using ProcesoAutonomo.ServiceA.Domain.Entities;
-using ProcesoAutonomo.ServiceA.Infrastructure.Identity;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
@@ -57,10 +55,10 @@ public class ApplicationDbContextInitialiser
                 Title = "Todo List",
                 Items =
                 {
-                    new TodoItem { Title = "Make a todo list 📃" },
-                    new TodoItem { Title = "Check off the first item ✅" },
-                    new TodoItem { Title = "Realise you've already done two things on the list! 🤯"},
-                    new TodoItem { Title = "Reward yourself with a nice, long nap 🏆" },
+                    new TodoItem { Title = "Make a todo list 📃", Priority = Domain.Enums.PriorityLevel.High },
+                    new TodoItem { Title = "Check off the first item ✅", Priority = Domain.Enums.PriorityLevel.Low },
+                    new TodoItem { Title = "Realise you've already done two things on the list! 🤯", Priority = Domain.Enums.PriorityLevel.Medium},
+                    new TodoItem { Title = "Reward yourself with a nice, long nap 🏆", Priority = Domain.Enums.PriorityLevel.None },
                 }
             });
 

@@ -2,9 +2,9 @@
 using AutoMapper;
 using ProcesoAutonomo.ServiceA.Application.Common.Mappings;
 using ProcesoAutonomo.ServiceA.Application.Common.Models;
-using ProcesoAutonomo.ServiceA.Application.TodoLists.Queries.GetTodos;
 using ProcesoAutonomo.ServiceA.Domain.Entities;
 using NUnit.Framework;
+using ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Queries.GetTodos;
 
 namespace ProcesoAutonomo.ServiceA.Application.UnitTests.Common.Mappings;
 

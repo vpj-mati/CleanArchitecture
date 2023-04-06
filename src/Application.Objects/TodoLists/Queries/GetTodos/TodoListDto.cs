@@ -1,9 +1,6 @@
-﻿using ProcesoAutonomo.ServiceA.Application.Common.Mappings;
-using ProcesoAutonomo.ServiceA.Domain.Entities;
+﻿namespace ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Queries.GetTodos;
 
-namespace ProcesoAutonomo.ServiceA.Application.TodoLists.Queries.GetTodos;
-
-public class TodoListDto : IMapFrom<TodoList>
+public class TodoListDto
 {
     public TodoListDto()
     {

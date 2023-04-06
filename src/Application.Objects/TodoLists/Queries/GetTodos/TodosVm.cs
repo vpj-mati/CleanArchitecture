@@ -1,4 +1,4 @@
-﻿namespace ProcesoAutonomo.ServiceA.Application.TodoLists.Queries.GetTodos;
+﻿namespace ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Queries.GetTodos;
 
 public class TodosVm
 {
