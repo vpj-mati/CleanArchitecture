@@ -3,6 +3,7 @@ using ProcesoAutonomo.ServiceA.Infrastructure.Persistence;
 using ProcesoAutonomo.ServiceA.WebApi.Services;
 using Microsoft.AspNetCore.Mvc;
 using ZymLabs.NSwag.FluentValidation;
+using WebApi.Services;
 
 namespace Microsoft.Extensions.DependencyInjection;
 
@@ -32,8 +33,7 @@ public static class ConfigureServices
         });
 
         // Customise default API behaviour
-        services.Configure<ApiBehaviorOptions>(options =>
-            options.SuppressModelStateInvalidFilter = true);
+        services.Configure<ApiBehaviorOptions>(options => options.SuppressModelStateInvalidFilter = true);
 
         services.AddOpenApiDocument((configure, serviceProvider) =>
         {
@@ -43,6 +43,9 @@ public static class ConfigureServices
             configure.SchemaProcessors.Add(fluentValidationSchemaProcessor);
 
             configure.Title = "Proceso Autonomo ServiceA API";
+
+            configure.SchemaNameGenerator = new CustomSchemaNameGenerator();
+            configure.TypeNameGenerator = new CustomTypeNameGenerator();
         });
 
         return services;

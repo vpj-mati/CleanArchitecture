@@ -95,8 +95,10 @@
       "className": "{controller}Client",
       "operationGenerationMode": "MultipleClientsFromOperationId",
       "additionalNamespaceUsages": [
+        "ProcesoAutonomo.ServiceA.Application.Objects.Common.Models",
         "ProcesoAutonomo.ServiceA.Application.Objects.WeatherForecasts.Queries.GetWeatherForecasts",
-        "ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Queries.GetTodos"
+        "ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Queries.GetTodos",
+        "ProcesoAutonomo.ServiceA.Application.Objects.TodoItems.Queries.GetTodoItemsWithPagination"
       ],
       "additionalContractNamespaceUsages": [],
       "generateOptionalParameters": false,

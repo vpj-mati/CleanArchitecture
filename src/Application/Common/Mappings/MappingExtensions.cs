@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using ProcesoAutonomo.ServiceA.Application.Common.Models;
 using Microsoft.EntityFrameworkCore;
+using ProcesoAutonomo.ServiceA.Application.Objects.Common.Models;
 
 namespace ProcesoAutonomo.ServiceA.Application.Common.Mappings;
 

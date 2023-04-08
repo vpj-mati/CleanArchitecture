@@ -19,13 +19,13 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.4">
-          <TreatAsUsed>true</TreatAsUsed>
+            <TreatAsUsed>true</TreatAsUsed>
         </PackageReference>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.4">
-          <TreatAsUsed>true</TreatAsUsed>
+            <TreatAsUsed>true</TreatAsUsed>
         </PackageReference>
         <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.4">
-          <TreatAsUsed>true</TreatAsUsed>
+            <TreatAsUsed>true</TreatAsUsed>
         </PackageReference>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.4">
             <PrivateAssets>all</PrivateAssets>
@@ -55,5 +55,14 @@
 
         <Message Text="$(NSwagOutput)" Condition="'$(NSwagExitCode)' == '0'" Importance="low" />
         <Error Text="$(NSwagOutput)" Condition="'$(NSwagExitCode)' != '0'" />
+    </Target>
+
+    <Target Name="MakeItGenericAgain" AfterTargets="NSwag" Condition=" '$(Configuration)' == 'Debug' ">
+        <PropertyGroup>
+            <FilePath>$(SolutionDir)src\HttpClients\NSwagClients.g.cs</FilePath>
+        </PropertyGroup>
+        <WriteLinesToFile File="$(FilePath)"
+                          Lines="$([System.Text.RegularExpressions.Regex]::Replace($([System.IO.File]::ReadAllText('$(FilePath)')), '([a-zA-Z\d]+)Of([a-zA-Z\d]+)', '$1&lt;$2&gt;'))"
+                          Overwrite="true" />
     </Target>
 </Project>

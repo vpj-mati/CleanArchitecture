@@ -2,8 +2,9 @@
 using AutoMapper.QueryableExtensions;
 using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
 using ProcesoAutonomo.ServiceA.Application.Common.Mappings;
-using ProcesoAutonomo.ServiceA.Application.Common.Models;
 using MediatR;
+using ProcesoAutonomo.ServiceA.Application.Objects.Common.Models;
+using ProcesoAutonomo.ServiceA.Application.Objects.TodoItems.Queries.GetTodoItemsWithPagination;
 
 namespace ProcesoAutonomo.ServiceA.Application.TodoItems.Queries.GetTodoItemsWithPagination;
 

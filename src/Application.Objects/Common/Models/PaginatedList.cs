@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace ProcesoAutonomo.ServiceA.Application.Common.Models;
+namespace ProcesoAutonomo.ServiceA.Application.Objects.Common.Models;
 
 public class PaginatedList<T>
 {

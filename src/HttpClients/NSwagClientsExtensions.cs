@@ -15,7 +15,7 @@ public static class NSwagClientsExtensions
         var httpClient = new HttpClient() { BaseAddress = new Uri(apiSettings.UriString) };
         services.AddScoped<IWeatherForecastClient>(wc => new WeatherForecastClient(httpClient));
         services.AddScoped<ITodoListsClient>(tl => new TodoListsClient(httpClient));
-        //services.AddScoped<ITodoItemsClient>(ti => new TodoItemsClient(httpClient));
+        services.AddScoped<ITodoItemsClient>(ti => new TodoItemsClient(httpClient));
 
         return services;
     }
