@@ -4,12 +4,12 @@ namespace ProcesoAutonomo.ServiceA.Application.Objects.Common.Models;
 
 public class PaginatedList<T>
 {
-    public IReadOnlyCollection<T> Items { get; }
+    public List<T> Items { get; }
     public int PageNumber { get; }
     public int TotalPages { get; }
     public int TotalCount { get; }
 
-    public PaginatedList(IReadOnlyCollection<T> items, int count, int pageNumber, int pageSize)
+    public PaginatedList(List<T> items, int count, int pageNumber, int pageSize)
     {
         PageNumber = pageNumber;
         TotalPages = (int)Math.Ceiling(count / (double)pageSize);

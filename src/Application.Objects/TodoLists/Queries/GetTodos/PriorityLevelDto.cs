@@ -2,7 +2,7 @@
 
 public class PriorityLevelDto
 {
-    public int Value { get; init; }
+    public int Value { get; set; }
 
-    public string? Name { get; init; }
+    public string? Name { get; set; }
 }

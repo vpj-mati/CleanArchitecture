@@ -1,13 +1,9 @@
 ﻿using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
 using ProcesoAutonomo.ServiceA.Domain.Entities;
 using MediatR;
+using ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Commands.CreateTodoList;
 
 namespace ProcesoAutonomo.ServiceA.Application.TodoLists.Commands.CreateTodoList;
-
-public record CreateTodoListCommand : IRequest<int>
-{
-    public string? Title { get; init; }
-}
 
 public class CreateTodoListCommandHandler : IRequestHandler<CreateTodoListCommand, int>
 {
