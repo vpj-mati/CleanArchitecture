@@ -2,11 +2,10 @@
 using NUnit.Framework;
 using ProcesoAutonomo.ServiceA.Application.Common.Exceptions;
 using ProcesoAutonomo.ServiceA.Application.Objects.TodoItems.Commands.CreateTodoItem;
+using ProcesoAutonomo.ServiceA.Application.Objects.TodoItems.Commands.UpdateTodoItem;
+using ProcesoAutonomo.ServiceA.Application.Objects.TodoItems.Commands.UpdateTodoItemDetail;
 using ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Commands.CreateTodoList;
-using ProcesoAutonomo.ServiceA.Application.TodoItems.Commands.UpdateTodoItem;
-using ProcesoAutonomo.ServiceA.Application.TodoItems.Commands.UpdateTodoItemDetail;
 using ProcesoAutonomo.ServiceA.Domain.Entities;
-using ProcesoAutonomo.ServiceA.Domain.Enums;
 
 namespace ProcesoAutonomo.ServiceA.Application.IntegrationTests.TodoItems.Commands;
 
@@ -42,7 +41,7 @@ public class UpdateTodoItemDetailTests : BaseTestFixture
             Id = itemId,
             ListId = listId,
             Note = "This is the note.",
-            Priority = PriorityLevel.High
+            Priority = Objects.Enums.PriorityLevel.High
         };
 
         await SendAsync(command);
@@ -52,7 +51,7 @@ public class UpdateTodoItemDetailTests : BaseTestFixture
         item.Should().NotBeNull();
         item!.ListId.Should().Be(command.ListId);
         item.Note.Should().Be(command.Note);
-        item.Priority.Should().Be(command.Priority);
+        item.Priority.Should().Be((Domain.Enums.PriorityLevel)command.Priority);
         item.LastModifiedBy.Should().NotBeNull();
         item.LastModifiedBy.Should().Be(userId);
         item.LastModified.Should().NotBeNull();

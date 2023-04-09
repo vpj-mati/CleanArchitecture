@@ -1,12 +1,11 @@
-﻿using ProcesoAutonomo.ServiceA.Application.Common.Exceptions;
+﻿using MediatR;
+using ProcesoAutonomo.ServiceA.Application.Common.Exceptions;
 using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
+using ProcesoAutonomo.ServiceA.Application.Objects.TodoItems.Commands.DeleteTodoItem;
 using ProcesoAutonomo.ServiceA.Domain.Entities;
 using ProcesoAutonomo.ServiceA.Domain.Events;
-using MediatR;
 
 namespace ProcesoAutonomo.ServiceA.Application.TodoItems.Commands.DeleteTodoItem;
-
-public record DeleteTodoItemCommand(int Id) : IRequest;
 
 public class DeleteTodoItemCommandHandler : IRequestHandler<DeleteTodoItemCommand>
 {

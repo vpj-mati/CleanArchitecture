@@ -1,18 +1,10 @@
-﻿using ProcesoAutonomo.ServiceA.Application.Common.Exceptions;
+﻿using MediatR;
+using ProcesoAutonomo.ServiceA.Application.Common.Exceptions;
 using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
+using ProcesoAutonomo.ServiceA.Application.Objects.TodoItems.Commands.UpdateTodoItem;
 using ProcesoAutonomo.ServiceA.Domain.Entities;
-using MediatR;
 
 namespace ProcesoAutonomo.ServiceA.Application.TodoItems.Commands.UpdateTodoItem;
-
-public record UpdateTodoItemCommand : IRequest
-{
-    public int Id { get; init; }
-
-    public string? Title { get; init; }
-
-    public bool Done { get; init; }
-}
 
 public class UpdateTodoItemCommandHandler : IRequestHandler<UpdateTodoItemCommand>
 {

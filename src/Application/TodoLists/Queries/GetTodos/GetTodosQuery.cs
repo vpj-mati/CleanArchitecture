@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
-using ProcesoAutonomo.ServiceA.Domain.Enums;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
+using ProcesoAutonomo.ServiceA.Application.Objects.Enums;
 using ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Queries.GetTodos;
 
 namespace ProcesoAutonomo.ServiceA.Application.TodoLists.Queries.GetTodos;

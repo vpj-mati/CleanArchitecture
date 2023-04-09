@@ -1,6 +1,7 @@
-﻿using ProcesoAutonomo.ServiceA.Domain.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using ProcesoAutonomo.ServiceA.Domain.Entities;
+using ProcesoAutonomo.ServiceA.Domain.Enums;
 
 namespace ProcesoAutonomo.ServiceA.Infrastructure.Persistence;
 
@@ -55,10 +56,10 @@ public class ApplicationDbContextInitialiser
                 Title = "Todo List",
                 Items =
                 {
-                    new TodoItem { Title = "Make a todo list 📃", Priority = Domain.Enums.PriorityLevel.High },
-                    new TodoItem { Title = "Check off the first item ✅", Priority = Domain.Enums.PriorityLevel.Low },
-                    new TodoItem { Title = "Realise you've already done two things on the list! 🤯", Priority = Domain.Enums.PriorityLevel.Medium},
-                    new TodoItem { Title = "Reward yourself with a nice, long nap 🏆", Priority = Domain.Enums.PriorityLevel.None },
+                    new TodoItem { Title = "Make a todo list 📃", Priority = PriorityLevel.High },
+                    new TodoItem { Title = "Check off the first item ✅", Priority = PriorityLevel.Low },
+                    new TodoItem { Title = "Realise you've already done two things on the list! 🤯", Priority = PriorityLevel.Medium},
+                    new TodoItem { Title = "Reward yourself with a nice, long nap 🏆", Priority = PriorityLevel.None },
                 }
             });
 

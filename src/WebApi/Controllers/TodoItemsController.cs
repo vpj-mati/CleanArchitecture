@@ -1,7 +1,9 @@
-﻿using System.Net;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using ProcesoAutonomo.ServiceA.Application.Objects.Common.Models;
 using ProcesoAutonomo.ServiceA.Application.Objects.TodoItems.Commands.CreateTodoItem;
+using ProcesoAutonomo.ServiceA.Application.Objects.TodoItems.Commands.DeleteTodoItem;
+using ProcesoAutonomo.ServiceA.Application.Objects.TodoItems.Commands.UpdateTodoItem;
+using ProcesoAutonomo.ServiceA.Application.Objects.TodoItems.Commands.UpdateTodoItemDetail;
 using ProcesoAutonomo.ServiceA.Application.Objects.TodoItems.Queries.GetTodoItemsWithPagination;
 
 namespace ProcesoAutonomo.ServiceA.WebApi.Controllers;
@@ -20,45 +22,45 @@ public class TodoItemsController : ApiControllerBase
         return await Mediator.Send(command);
     }
 
-    //    [HttpPut("{id}")]
-    //    [ProducesResponseType(StatusCodes.Status204NoContent)]
-    //    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    //    [ProducesDefaultResponseType]
-    //    public async Task<IActionResult> Update(int id, UpdateTodoItemCommand command)
-    //    {
-    //        if (id != command.Id)
-    //        {
-    //            return BadRequest();
-    //        }
+    [HttpPut("{id}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesDefaultResponseType]
+    public async Task<IActionResult> Update(int id, UpdateTodoItemCommand command)
+    {
+        if (id != command.Id)
+        {
+            return BadRequest();
+        }
 
-    //        await Mediator.Send(command);
+        await Mediator.Send(command);
 
-    //        return NoContent();
-    //    }
+        return NoContent();
+    }
 
-    //    [HttpPut("[action]")]
-    //    [ProducesResponseType(StatusCodes.Status204NoContent)]
-    //    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    //    [ProducesDefaultResponseType]
-    //    public async Task<IActionResult> UpdateItemDetails(int id, UpdateTodoItemDetailCommand command)
-    //    {
-    //        if (id != command.Id)
-    //        {
-    //            return BadRequest();
-    //        }
+    [HttpPut("[action]")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesDefaultResponseType]
+    public async Task<IActionResult> UpdateItemDetails(int id, UpdateTodoItemDetailCommand command)
+    {
+        if (id != command.Id)
+        {
+            return BadRequest();
+        }
 
-    //        await Mediator.Send(command);
+        await Mediator.Send(command);
 
-    //        return NoContent();
-    //    }
+        return NoContent();
+    }
 
-    //    [HttpDelete("{id}")]
-    //    [ProducesResponseType(StatusCodes.Status204NoContent)]
-    //    [ProducesDefaultResponseType]
-    //    public async Task<IActionResult> Delete(int id)
-    //    {
-    //        await Mediator.Send(new DeleteTodoItemCommand(id));
+    [HttpDelete("{id}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesDefaultResponseType]
+    public async Task<IActionResult> Delete(int id)
+    {
+        await Mediator.Send(new DeleteTodoItemCommand(id));
 
-    //        return NoContent();
-    //    }
+        return NoContent();
+    }
 }
