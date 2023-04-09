@@ -95,12 +95,14 @@
       "className": "{controller}Client",
       "operationGenerationMode": "MultipleClientsFromOperationId",
       "additionalNamespaceUsages": [
+        "Microsoft.AspNetCore.Mvc",
         "ProcesoAutonomo.ServiceA.Application.Objects.Common.Models",
-        "ProcesoAutonomo.ServiceA.Application.Objects.WeatherForecasts.Queries.GetWeatherForecasts",
-        "ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Commands.CreateTodoList",
-        "ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Queries.GetTodos",
+        "ProcesoAutonomo.ServiceA.Application.Objects.TodoItems.Commands.CreateTodoItem",
         "ProcesoAutonomo.ServiceA.Application.Objects.TodoItems.Queries.GetTodoItemsWithPagination",
-        "ProcesoAutonomo.ServiceA.Application.Objects.TodoItems.Commands.CreateTodoItem"
+        "ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Commands.CreateTodoList",
+        "ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Commands.UpdateTodoList",
+        "ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Queries.GetTodos",
+        "ProcesoAutonomo.ServiceA.Application.Objects.WeatherForecasts.Queries.GetWeatherForecasts"
       ],
       "additionalContractNamespaceUsages": [],
       "generateOptionalParameters": false,

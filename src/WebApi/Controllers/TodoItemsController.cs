@@ -9,7 +9,6 @@ namespace ProcesoAutonomo.ServiceA.WebApi.Controllers;
 public class TodoItemsController : ApiControllerBase
 {
     [HttpGet]
-    [NSwag.Annotations.SwaggerResponse((int)HttpStatusCode.OK, typeof(PaginatedList<TodoItemBriefDto>))]
     public async Task<ActionResult<PaginatedList<TodoItemBriefDto>>> GetTodoItemsWithPagination([FromQuery] GetTodoItemsWithPaginationQuery query)
     {
         return await Mediator.Send(query);

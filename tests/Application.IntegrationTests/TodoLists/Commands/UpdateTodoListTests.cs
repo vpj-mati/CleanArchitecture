@@ -1,10 +1,9 @@
-﻿using ProcesoAutonomo.ServiceA.Application.Common.Exceptions;
-using ProcesoAutonomo.ServiceA.Application.TodoLists.Commands.CreateTodoList;
-using ProcesoAutonomo.ServiceA.Application.TodoLists.Commands.UpdateTodoList;
-using ProcesoAutonomo.ServiceA.Domain.Entities;
-using FluentAssertions;
+﻿using FluentAssertions;
 using NUnit.Framework;
+using ProcesoAutonomo.ServiceA.Application.Common.Exceptions;
 using ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Commands.CreateTodoList;
+using ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Commands.UpdateTodoList;
+using ProcesoAutonomo.ServiceA.Domain.Entities;
 
 namespace ProcesoAutonomo.ServiceA.Application.IntegrationTests.TodoLists.Commands;
 

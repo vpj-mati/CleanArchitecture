@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Commands.CreateTodoList;
+using ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Commands.UpdateTodoList;
 using ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Queries.GetTodos;
 using ProcesoAutonomo.ServiceA.Application.TodoLists.Queries.GetTodos;
 
@@ -27,21 +28,21 @@ public class TodoListsController : ApiControllerBase
         return await Mediator.Send(command);
     }
 
-    //    [HttpPut("{id}")]
-    //    [ProducesResponseType(StatusCodes.Status204NoContent)]
-    //    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    //    [ProducesDefaultResponseType]
-    //    public async Task<IActionResult> Update(int id, UpdateTodoListCommand command)
-    //    {
-    //        if (id != command.Id)
-    //        {
-    //            return BadRequest();
-    //        }
+    [HttpPut("{id}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesDefaultResponseType]
+    public async Task<IActionResult> Update(int id, UpdateTodoListCommand command)
+    {
+        if (id != command.Id)
+        {
+            return BadRequest();
+        }
 
-    //        await Mediator.Send(command);
+        await Mediator.Send(command);
 
-    //        return NoContent();
-    //    }
+        return NoContent();
+    }
 
     //    [HttpDelete("{id}")]
     //    [ProducesResponseType(StatusCodes.Status204NoContent)]
