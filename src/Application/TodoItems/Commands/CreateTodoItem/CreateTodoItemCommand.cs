@@ -1,16 +1,10 @@
-﻿using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
+﻿using MediatR;
+using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
+using ProcesoAutonomo.ServiceA.Application.Objects.TodoItems.Commands.CreateTodoItem;
 using ProcesoAutonomo.ServiceA.Domain.Entities;
 using ProcesoAutonomo.ServiceA.Domain.Events;
-using MediatR;
 
 namespace ProcesoAutonomo.ServiceA.Application.TodoItems.Commands.CreateTodoItem;
-
-public record CreateTodoItemCommand : IRequest<int>
-{
-    public int ListId { get; init; }
-
-    public string? Title { get; init; }
-}
 
 public class CreateTodoItemCommandHandler : IRequestHandler<CreateTodoItemCommand, int>
 {

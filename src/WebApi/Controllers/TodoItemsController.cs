@@ -1,8 +1,8 @@
 ﻿using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using ProcesoAutonomo.ServiceA.Application.Objects.Common.Models;
+using ProcesoAutonomo.ServiceA.Application.Objects.TodoItems.Commands.CreateTodoItem;
 using ProcesoAutonomo.ServiceA.Application.Objects.TodoItems.Queries.GetTodoItemsWithPagination;
-using ProcesoAutonomo.ServiceA.Application.TodoItems.Queries.GetTodoItemsWithPagination;
 
 namespace ProcesoAutonomo.ServiceA.WebApi.Controllers;
 
@@ -15,11 +15,11 @@ public class TodoItemsController : ApiControllerBase
         return await Mediator.Send(query);
     }
 
-    //    [HttpPost]
-    //    public async Task<ActionResult<int>> Create(CreateTodoItemCommand command)
-    //    {
-    //        return await Mediator.Send(command);
-    //    }
+    [HttpPost]
+    public async Task<ActionResult<int>> Create(CreateTodoItemCommand command)
+    {
+        return await Mediator.Send(command);
+    }
 
     //    [HttpPut("{id}")]
     //    [ProducesResponseType(StatusCodes.Status204NoContent)]

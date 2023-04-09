@@ -99,7 +99,8 @@
         "ProcesoAutonomo.ServiceA.Application.Objects.WeatherForecasts.Queries.GetWeatherForecasts",
         "ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Commands.CreateTodoList",
         "ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Queries.GetTodos",
-        "ProcesoAutonomo.ServiceA.Application.Objects.TodoItems.Queries.GetTodoItemsWithPagination"
+        "ProcesoAutonomo.ServiceA.Application.Objects.TodoItems.Queries.GetTodoItemsWithPagination",
+        "ProcesoAutonomo.ServiceA.Application.Objects.TodoItems.Commands.CreateTodoItem"
       ],
       "additionalContractNamespaceUsages": [],
       "generateOptionalParameters": false,
