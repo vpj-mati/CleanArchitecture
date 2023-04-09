@@ -103,7 +103,9 @@
         "ProcesoAutonomo.ServiceA.Application.Objects.TodoItems.Commands.UpdateTodoItemDetail",
         "ProcesoAutonomo.ServiceA.Application.Objects.TodoItems.Queries.GetTodoItemsWithPagination",
         "ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Commands.CreateTodoList",
+        "ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Commands.DeleteTodoList",
         "ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Commands.UpdateTodoList",
+        "ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Queries.ExportTodos",
         "ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Queries.GetTodos",
         "ProcesoAutonomo.ServiceA.Application.Objects.WeatherForecasts.Queries.GetWeatherForecasts"
       ],

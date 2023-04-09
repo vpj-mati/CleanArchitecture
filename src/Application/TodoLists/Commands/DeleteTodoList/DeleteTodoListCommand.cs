@@ -3,10 +3,9 @@ using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
 using ProcesoAutonomo.ServiceA.Domain.Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Commands.DeleteTodoList;
 
 namespace ProcesoAutonomo.ServiceA.Application.TodoLists.Commands.DeleteTodoList;
-
-public record DeleteTodoListCommand(int Id) : IRequest;
 
 public class DeleteTodoListCommandHandler : IRequestHandler<DeleteTodoListCommand>
 {

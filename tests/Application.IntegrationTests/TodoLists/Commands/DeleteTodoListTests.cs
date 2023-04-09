@@ -5,6 +5,7 @@ using ProcesoAutonomo.ServiceA.Domain.Entities;
 using FluentAssertions;
 using NUnit.Framework;
 using ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Commands.CreateTodoList;
+using ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Commands.DeleteTodoList;
 
 namespace ProcesoAutonomo.ServiceA.Application.IntegrationTests.TodoLists.Commands;
 

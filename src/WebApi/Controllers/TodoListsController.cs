@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Commands.CreateTodoList;
+using ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Commands.DeleteTodoList;
 using ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Commands.UpdateTodoList;
+using ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Queries.ExportTodos;
 using ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Queries.GetTodos;
 using ProcesoAutonomo.ServiceA.Application.TodoLists.Queries.GetTodos;
 
@@ -14,13 +16,13 @@ public class TodoListsController : ApiControllerBase
         return await Mediator.Send(new GetTodosQuery());
     }
 
-    //    [HttpGet("{id}")]
-    //    public async Task<FileResult> Get(int id)
-    //    {
-    //        var vm = await Mediator.Send(new ExportTodosQuery { ListId = id });
+    [HttpGet("{id}")]
+    public async Task<FileResult> Get(int id)
+    {
+        var vm = await Mediator.Send(new ExportTodosQuery { ListId = id });
 
-    //        return File(vm.Content, vm.ContentType, vm.FileName);
-    //    }
+        return File(vm.Content, vm.ContentType, vm.FileName);
+    }
 
     [HttpPost]
     public async Task<ActionResult<int>> Create(CreateTodoListCommand command)
@@ -44,13 +46,13 @@ public class TodoListsController : ApiControllerBase
         return NoContent();
     }
 
-    //    [HttpDelete("{id}")]
-    //    [ProducesResponseType(StatusCodes.Status204NoContent)]
-    //    [ProducesDefaultResponseType]
-    //    public async Task<IActionResult> Delete(int id)
-    //    {
-    //        await Mediator.Send(new DeleteTodoListCommand(id));
+    [HttpDelete("{id}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesDefaultResponseType]
+    public async Task<IActionResult> Delete(int id)
+    {
+        await Mediator.Send(new DeleteTodoListCommand(id));
 
-    //        return NoContent();
-    //    }
+        return NoContent();
+    }
 }

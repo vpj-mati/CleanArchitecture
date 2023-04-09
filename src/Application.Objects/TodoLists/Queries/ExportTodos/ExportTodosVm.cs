@@ -1,4 +1,4 @@
-﻿namespace ProcesoAutonomo.ServiceA.Application.TodoLists.Queries.ExportTodos;
+﻿namespace ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Queries.ExportTodos;
 
 public class ExportTodosVm
 {
@@ -13,5 +13,5 @@ public class ExportTodosVm
 
     public string ContentType { get; init; }
 
-    public byte[] Content { get; init;}
+    public byte[] Content { get; init; }
 }
