@@ -53,7 +53,7 @@ public class ApplicationDbContextInitialiser
         {
             _context.TodoLists.Add(new TodoList
             {
-                Title = "Todo List",
+                Title = "Todo List From Service A",
                 Items =
                 {
                     new TodoItem { Title = "Make a todo list 📃", Priority = PriorityLevel.High },

@@ -17,7 +17,7 @@ public static class ConfigureServices
         if (configuration.GetValue<bool>("UseInMemoryDatabase"))
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseInMemoryDatabase("CleanArchitectureDb"));
+                options.UseInMemoryDatabase("ServiceADb"));
         }
         else
         {
