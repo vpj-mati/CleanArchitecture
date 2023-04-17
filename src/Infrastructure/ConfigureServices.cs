@@ -5,6 +5,8 @@ using ProcesoAutonomo.ServiceA.Infrastructure.Persistence.Interceptors;
 using ProcesoAutonomo.ServiceA.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using ProcesoAutonomo.ServiceA.Infrastructure.Identity;
+using Microsoft.AspNetCore.Builder;
 
 namespace Microsoft.Extensions.DependencyInjection;
 
@@ -32,6 +34,15 @@ public static class ConfigureServices
 
         services.AddTransient<IDateTime, DateTimeService>();
         services.AddTransient<ICsvFileBuilder, CsvFileBuilder>();
+
+        var sett = configuration.GetSection(nameof(IdentityAuthenticationOptions)).Get<IdentityAuthenticationOptions>();
+        services.AddAuthentication(sett?.DefaultScheme??"")
+                .AddIdentityServerAuthentication(sett?.DefaultScheme, options =>
+                {
+                    options.RequireHttpsMetadata = sett?.RequireHttpsMetadata??false;
+                    options.ApiName = sett?.ApiName;
+                    options.Authority = sett?.Authority;
+                });
 
         return services;
     }
