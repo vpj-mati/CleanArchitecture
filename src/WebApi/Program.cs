@@ -36,10 +36,15 @@ app.UseSwaggerUi3(settings =>
 {
     settings.Path = "/api";
     settings.DocumentPath = "/api/specification.json";
+    settings.OAuth2Client = new()
+    {
+        AppName = "ServiceA_swaggerui",
+        ClientId = "ServiceA_swaggerui",
+        UsePkceWithAuthorizationCodeGrant = true,
+    };
 });
 
 app.UseRouting();
-
 
 app.MapControllerRoute(
     name: "default",
@@ -48,6 +53,9 @@ app.MapControllerRoute(
 app.MapRazorPages();
 
 app.MapFallbackToFile("index.html");
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.Run();
 

@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using IdentityModel.Client;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ProcesoAutonomo.ServiceA.HttpClients.NSwagClients;
 
@@ -7,15 +8,32 @@ public static class NSwagServiceAClientsExtensions
 {
     public static IServiceCollection AddApiServiceAHttpClients(this IServiceCollection services, IConfiguration configuration)
     {
-        services.Configure<NSwagServiceAClientsSettings>(options => configuration.GetSection(nameof(NSwagServiceAClientsSettings)).Bind(options));
+        var apiSettings = configuration.GetSection(nameof(NSwagServiceAClientsSettings)).Get<NSwagServiceAClientsSettings>();
 
-        NSwagServiceAClientsSettings apiSettings = new();
-        configuration.GetSection(nameof(NSwagServiceAClientsSettings)).Bind(apiSettings);
+        services.AddSingleton(new ClientCredentialsTokenRequest
+        {
+            Address = "https://localhost:5301/connect/token",
+            ClientId = "RapidBlazorServer",
+            ClientSecret = "RapidBlazorServerSecret",
+            Scope = "ServiceA_scope"
+        });
 
-        var httpClient = new HttpClient() { BaseAddress = new Uri(apiSettings.UriString) };
-        services.AddScoped<IWeatherForecastClient>(wc => new WeatherForecastClient(httpClient));
-        services.AddScoped<ITodoListsClient>(tl => new TodoListsClient(httpClient));
-        services.AddScoped<ITodoItemsClient>(ti => new TodoItemsClient(httpClient));
+        services.AddHttpClient<IIdentityServerClient, IdentityServerClient>(client =>
+        {
+            client.BaseAddress = new Uri("https://localhost:5301");
+            client.DefaultRequestHeaders.Add("Accept", "application/json");
+        });
+
+        services.AddTransient<ProtectedServiceABearerTokenHandler>();
+
+        services.AddHttpClient<IWeatherForecastClient, WeatherForecastClient>(client => client.BaseAddress = new Uri("https://localhost:5001"))
+            .AddHttpMessageHandler<ProtectedServiceABearerTokenHandler>();
+
+        services.AddHttpClient<ITodoListsClient, TodoListsClient>(client => client.BaseAddress = new Uri("https://localhost:5001"))
+            .AddHttpMessageHandler<ProtectedServiceABearerTokenHandler>();
+
+        services.AddHttpClient<ITodoItemsClient, TodoItemsClient>(client => client.BaseAddress = new Uri("https://localhost:5001"))
+            .AddHttpMessageHandler<ProtectedServiceABearerTokenHandler>();
 
         return services;
     }

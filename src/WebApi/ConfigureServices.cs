@@ -4,6 +4,8 @@ using ProcesoAutonomo.ServiceA.WebApi.Services;
 using Microsoft.AspNetCore.Mvc;
 using ZymLabs.NSwag.FluentValidation;
 using WebApi.Services;
+using NSwag;
+using NSwag.Generation.Processors.Security;
 
 namespace Microsoft.Extensions.DependencyInjection;
 
@@ -46,6 +48,25 @@ public static class ConfigureServices
 
             configure.SchemaNameGenerator = new CustomSchemaNameGenerator();
             configure.TypeNameGenerator = new CustomTypeNameGenerator();
+            
+            
+            configure.AddSecurity("oauth2", new OpenApiSecurityScheme()
+            {
+                Type = OpenApiSecuritySchemeType.OAuth2,
+                Flow = OpenApiOAuth2Flow.AccessCode,
+                Flows = new OpenApiOAuthFlows
+                {
+                    AuthorizationCode = new OpenApiOAuthFlow
+                    {
+                        AuthorizationUrl = "https://localhost:5301/connect/authorize",
+                        TokenUrl = "https://localhost:5301/connect/token",
+                        Scopes = new Dictionary<string, string>() { { "ServiceA_scope", "Service A - full access" } },
+                    }
+                },
+                In = OpenApiSecurityApiKeyLocation.Header,
+                Name = "Authorization"
+            });
+            configure.OperationProcessors.Add(new AspNetCoreOperationSecurityScopeProcessor("oauth2"));
         });
 
         return services;
