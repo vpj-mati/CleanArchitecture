@@ -1,5 +1,4 @@
-﻿using IdentityModel.Client;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ProcesoAutonomo.ServiceA.HttpClients.NSwagClients;
 
@@ -10,29 +9,15 @@ public static class NSwagServiceAClientsExtensions
     {
         var apiSettings = configuration.GetSection(nameof(NSwagServiceAClientsSettings)).Get<NSwagServiceAClientsSettings>();
 
-        services.AddSingleton(new ClientCredentialsTokenRequest
-        {
-            Address = "https://localhost:5301/connect/token",
-            ClientId = "RapidBlazorServer",
-            ClientSecret = "RapidBlazorServerSecret",
-            Scope = "ServiceA_scope"
-        });
-
-        services.AddHttpClient<IIdentityServerClient, IdentityServerClient>(client =>
-        {
-            client.BaseAddress = new Uri("https://localhost:5301");
-            client.DefaultRequestHeaders.Add("Accept", "application/json");
-        });
-
         services.AddTransient<ProtectedServiceABearerTokenHandler>();
 
-        services.AddHttpClient<IWeatherForecastClient, WeatherForecastClient>(client => client.BaseAddress = new Uri("https://localhost:5001"))
+        services.AddHttpClient<IWeatherForecastClient, WeatherForecastClient>(client => client.BaseAddress = new Uri(apiSettings?.UriString ?? "" ))
             .AddHttpMessageHandler<ProtectedServiceABearerTokenHandler>();
 
-        services.AddHttpClient<ITodoListsClient, TodoListsClient>(client => client.BaseAddress = new Uri("https://localhost:5001"))
+        services.AddHttpClient<ITodoListsClient, TodoListsClient>(client => client.BaseAddress = new Uri(apiSettings?.UriString ?? ""))
             .AddHttpMessageHandler<ProtectedServiceABearerTokenHandler>();
 
-        services.AddHttpClient<ITodoItemsClient, TodoItemsClient>(client => client.BaseAddress = new Uri("https://localhost:5001"))
+        services.AddHttpClient<ITodoItemsClient, TodoItemsClient>(client => client.BaseAddress = new Uri(apiSettings?.UriString ?? ""))
             .AddHttpMessageHandler<ProtectedServiceABearerTokenHandler>();
 
         return services;

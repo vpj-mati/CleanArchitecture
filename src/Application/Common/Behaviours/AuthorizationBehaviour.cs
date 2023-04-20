@@ -1,8 +1,8 @@
 ﻿using System.Reflection;
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using ProcesoAutonomo.ServiceA.Application.Common.Exceptions;
 using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
-using ProcesoAutonomo.ServiceA.Application.Common.Security;
-using MediatR;
 
 namespace ProcesoAutonomo.ServiceA.Application.Common.Behaviours;
 

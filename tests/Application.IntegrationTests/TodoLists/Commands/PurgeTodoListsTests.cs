@@ -1,11 +1,10 @@
-﻿using ProcesoAutonomo.ServiceA.Application.Common.Exceptions;
-using ProcesoAutonomo.ServiceA.Application.Common.Security;
-using ProcesoAutonomo.ServiceA.Application.TodoLists.Commands.CreateTodoList;
+﻿using FluentAssertions;
+using Microsoft.AspNetCore.Authorization;
+using NUnit.Framework;
+using ProcesoAutonomo.ServiceA.Application.Common.Exceptions;
+using ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Commands.CreateTodoList;
 using ProcesoAutonomo.ServiceA.Application.TodoLists.Commands.PurgeTodoLists;
 using ProcesoAutonomo.ServiceA.Domain.Entities;
-using FluentAssertions;
-using NUnit.Framework;
-using ProcesoAutonomo.ServiceA.Application.Objects.TodoLists.Commands.CreateTodoList;
 
 namespace ProcesoAutonomo.ServiceA.Application.IntegrationTests.TodoLists.Commands;
 
