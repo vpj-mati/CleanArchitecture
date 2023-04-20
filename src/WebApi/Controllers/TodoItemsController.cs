@@ -8,7 +8,7 @@ using ProcesoAutonomo.ServiceA.Application.Objects.TodoItems.Queries.GetTodoItem
 
 namespace ProcesoAutonomo.ServiceA.WebApi.Controllers;
 
-public class TodoItemsController : ApiControllerBase
+public class TodoItemsServiceAController : ApiControllerBase
 {
     [HttpGet]
     public async Task<ActionResult<PaginatedList<TodoItemBriefDto>>> GetTodoItemsWithPagination([FromQuery] GetTodoItemsWithPaginationQuery query)

@@ -6,12 +6,12 @@
     "version": "1.0.0"
   },
   "paths": {
-    "/api/TodoItems": {
+    "/api/TodoItemsServiceA": {
       "get": {
         "tags": [
-          "TodoItems"
+          "TodoItemsServiceA"
         ],
-        "operationId": "TodoItems_GetTodoItemsWithPagination",
+        "operationId": "TodoItemsServiceA_GetTodoItemsWithPagination",
         "parameters": [
           {
             "name": "ListId",
@@ -56,9 +56,9 @@
       },
       "post": {
         "tags": [
-          "TodoItems"
+          "TodoItemsServiceA"
         ],
-        "operationId": "TodoItems_Create",
+        "operationId": "TodoItemsServiceA_Create",
         "requestBody": {
           "x-name": "command",
           "content": {
@@ -86,12 +86,12 @@
         }
       }
     },
-    "/api/TodoItems/{id}": {
+    "/api/TodoItemsServiceA/{id}": {
       "put": {
         "tags": [
-          "TodoItems"
+          "TodoItemsServiceA"
         ],
-        "operationId": "TodoItems_Update",
+        "operationId": "TodoItemsServiceA_Update",
         "parameters": [
           {
             "name": "id",
@@ -144,9 +144,9 @@
       },
       "delete": {
         "tags": [
-          "TodoItems"
+          "TodoItemsServiceA"
         ],
-        "operationId": "TodoItems_Delete",
+        "operationId": "TodoItemsServiceA_Delete",
         "parameters": [
           {
             "name": "id",
@@ -176,12 +176,12 @@
         }
       }
     },
-    "/api/TodoItems/UpdateItemDetails": {
+    "/api/TodoItemsServiceA/UpdateItemDetails": {
       "put": {
         "tags": [
-          "TodoItems"
+          "TodoItemsServiceA"
         ],
-        "operationId": "TodoItems_UpdateItemDetails",
+        "operationId": "TodoItemsServiceA_UpdateItemDetails",
         "parameters": [
           {
             "name": "id",
@@ -232,12 +232,12 @@
         }
       }
     },
-    "/api/TodoLists": {
+    "/api/TodoListsServiceA": {
       "get": {
         "tags": [
-          "TodoLists"
+          "TodoListsServiceA"
         ],
-        "operationId": "TodoLists_Get",
+        "operationId": "TodoListsServiceA_Get",
         "responses": {
           "200": {
             "description": "",
@@ -253,9 +253,9 @@
       },
       "post": {
         "tags": [
-          "TodoLists"
+          "TodoListsServiceA"
         ],
-        "operationId": "TodoLists_Create",
+        "operationId": "TodoListsServiceA_Create",
         "requestBody": {
           "x-name": "command",
           "content": {
@@ -283,12 +283,12 @@
         }
       }
     },
-    "/api/TodoLists/{id}": {
+    "/api/TodoListsServiceA/{id}": {
       "get": {
         "tags": [
-          "TodoLists"
+          "TodoListsServiceA"
         ],
-        "operationId": "TodoLists_Get2",
+        "operationId": "TodoListsServiceA_Get2",
         "parameters": [
           {
             "name": "id",
@@ -317,9 +317,9 @@
       },
       "put": {
         "tags": [
-          "TodoLists"
+          "TodoListsServiceA"
         ],
-        "operationId": "TodoLists_Update",
+        "operationId": "TodoListsServiceA_Update",
         "parameters": [
           {
             "name": "id",
@@ -372,9 +372,9 @@
       },
       "delete": {
         "tags": [
-          "TodoLists"
+          "TodoListsServiceA"
         ],
-        "operationId": "TodoLists_Delete",
+        "operationId": "TodoListsServiceA_Delete",
         "parameters": [
           {
             "name": "id",
@@ -404,12 +404,12 @@
         }
       }
     },
-    "/api/WeatherForecast": {
+    "/api/WeatherForecastServiceA": {
       "get": {
         "tags": [
-          "WeatherForecast"
+          "WeatherForecastServiceA"
         ],
-        "operationId": "WeatherForecast_Get",
+        "operationId": "WeatherForecastServiceA_Get",
         "responses": {
           "200": {
             "description": "",

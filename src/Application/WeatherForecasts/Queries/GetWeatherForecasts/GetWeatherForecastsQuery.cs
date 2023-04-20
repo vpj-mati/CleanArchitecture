@@ -9,7 +9,7 @@ public class GetWeatherForecastsQueryHandler : IRequestHandler<GetWeatherForecas
 {
     private static readonly string[] Summaries = new[]
     {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+        "Service A Freezing", "Service A Bracing", "Service A Chilly", "Service A Cool", "Service A Mild", "Service A Warm", "Service A Balmy", "Service A Hot", "Service A Sweltering", "Service A Scorching"
     };
 
     public async Task<IEnumerable<WeatherForecast>> Handle(GetWeatherForecastsQuery request, CancellationToken cancellationToken)

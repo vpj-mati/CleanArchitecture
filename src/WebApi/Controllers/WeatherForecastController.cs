@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace ProcesoAutonomo.ServiceA.WebApi.Controllers;
 
 [Authorize]
-public class WeatherForecastController : ApiControllerBase
+public class WeatherForecastServiceAController : ApiControllerBase
 {
 
     [HttpGet]

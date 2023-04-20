@@ -11,13 +11,13 @@ public static class NSwagServiceAClientsExtensions
 
         services.AddTransient<ProtectedServiceABearerTokenHandler>();
 
-        services.AddHttpClient<IWeatherForecastClient, WeatherForecastClient>(client => client.BaseAddress = new Uri(apiSettings?.UriString ?? "" ))
+        services.AddHttpClient<IWeatherForecastServiceAClient, WeatherForecastServiceAClient>(client => client.BaseAddress = new Uri(apiSettings?.UriString ?? "" ))
             .AddHttpMessageHandler<ProtectedServiceABearerTokenHandler>();
 
-        services.AddHttpClient<ITodoListsClient, TodoListsClient>(client => client.BaseAddress = new Uri(apiSettings?.UriString ?? ""))
+        services.AddHttpClient<ITodoListsServiceAClient, TodoListsServiceAClient>(client => client.BaseAddress = new Uri(apiSettings?.UriString ?? ""))
             .AddHttpMessageHandler<ProtectedServiceABearerTokenHandler>();
 
-        services.AddHttpClient<ITodoItemsClient, TodoItemsClient>(client => client.BaseAddress = new Uri(apiSettings?.UriString ?? ""))
+        services.AddHttpClient<ITodoItemsServiceAClient, TodoItemsServiceAClient>(client => client.BaseAddress = new Uri(apiSettings?.UriString ?? ""))
             .AddHttpMessageHandler<ProtectedServiceABearerTokenHandler>();
 
         return services;

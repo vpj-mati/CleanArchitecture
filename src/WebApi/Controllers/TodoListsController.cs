@@ -8,7 +8,7 @@ using ProcesoAutonomo.ServiceA.Application.TodoLists.Queries.GetTodos;
 
 namespace ProcesoAutonomo.ServiceA.WebApi.Controllers;
 
-public class TodoListsController : ApiControllerBase
+public class TodoListsServiceAController : ApiControllerBase
 {
     [HttpGet]
     public async Task<ActionResult<TodosVm>> Get()

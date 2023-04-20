@@ -1,12 +1,12 @@
-﻿using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
 using ProcesoAutonomo.ServiceA.Infrastructure.Files;
+using ProcesoAutonomo.ServiceA.Infrastructure.Identity;
 using ProcesoAutonomo.ServiceA.Infrastructure.Persistence;
 using ProcesoAutonomo.ServiceA.Infrastructure.Persistence.Interceptors;
 using ProcesoAutonomo.ServiceA.Infrastructure.Services;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using ProcesoAutonomo.ServiceA.Infrastructure.Identity;
-using Microsoft.AspNetCore.Builder;
 
 namespace Microsoft.Extensions.DependencyInjection;
 

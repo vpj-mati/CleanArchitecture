@@ -1,11 +1,11 @@
-﻿using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
-using ProcesoAutonomo.ServiceA.Infrastructure.Persistence;
-using ProcesoAutonomo.ServiceA.WebApi.Services;
-using Microsoft.AspNetCore.Mvc;
-using ZymLabs.NSwag.FluentValidation;
-using WebApi.Services;
+﻿using Microsoft.AspNetCore.Mvc;
 using NSwag;
 using NSwag.Generation.Processors.Security;
+using ProcesoAutonomo.ServiceA.Application.Common.Interfaces;
+using ProcesoAutonomo.ServiceA.Infrastructure.Persistence;
+using ProcesoAutonomo.ServiceA.WebApi.Services;
+using WebApi.Services;
+using ZymLabs.NSwag.FluentValidation;
 
 namespace Microsoft.Extensions.DependencyInjection;
 
